@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<s:a action="hello">hello</s:a>
+	<s:form action="hello">
+		<s:textfield name="message" /> 
+		<s:submit value="commit" />
+	</s:form>
 </body>
 </html>
