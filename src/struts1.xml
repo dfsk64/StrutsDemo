@@ -3,10 +3,14 @@
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-  	<constant name="struts.devMode" value="true" />
+	<constant name="struts.devMode" value="true" />
 	<package name="default" namespace="/" extends="struts-default">
 		<action name="hello" class="com.action.HelloAction" method="execute">
 			<result name="success">/hello.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="upload" class="com.action.UploadAction" method="execute">
+			<result name="success">/upload_success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 	</package>
