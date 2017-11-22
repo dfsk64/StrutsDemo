@@ -8,10 +8,10 @@
 <title>用户登录</title>
 </head>
 <body>
-	<form action="userlogin" method="post">
-		用户名<input type="text" name="userName" /><br/>
-		密码<input type="password" name="password" /><br/>
-		<input type="submit" value="登录" />
-	</form>
+	<s:form action="userlogin" method="post">
+		<s:textfield name="userName" label="用户名" size="20" /><br/>
+		<s:password name="password" label="密码" size="20" /><br/>
+		<s:submit name="submit" label="登录" align="center" />
+	 </s:form>
 </body>
 </html>
