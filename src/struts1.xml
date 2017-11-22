@@ -13,5 +13,12 @@
 			<result name="success">/upload_success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		<action name="login" class="com.action.LoginAction">
+			<result>/WEB-INF/login.jsp</result>
+		</action>
+		<action name="userlogin" class="com.action.UserLoginAction">
+			<result name="success">/WEB-INF/userlogin.jsp</result>
+			<result name="error">/WEB-INF/userloginfail.jsp</result>
+		</action>
 	</package>
 </struts>
