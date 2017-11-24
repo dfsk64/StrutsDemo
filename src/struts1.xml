@@ -24,5 +24,8 @@
 		<action name="error" class="com.action.ErrorAction">
 			<result>/WEB-INF/error.jsp</result>
 		</action>
+		<action name="tags" class="com.action.TagsAction">
+			<result>/WEB-INF/tags.jsp</result>
+		</action>
 	</package>
 </struts>
