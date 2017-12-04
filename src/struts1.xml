@@ -27,5 +27,12 @@
 		<action name="tags" class="com.action.TagsAction">
 			<result>/WEB-INF/tags.jsp</result>
 		</action>
+		<action name="product" class="com.action.ProductAction">
+			<result>/WEB-INF/product.jsp</result>
+		</action>
+		<action name="productadd" class="com.action.ProductAddAction">
+			<result>/WEB-INF/product.jsp</result>
+			<result name="error">/error.jsp?errMsg=dddd</result>
+		</action>
 	</package>
 </struts>

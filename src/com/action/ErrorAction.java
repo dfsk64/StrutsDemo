@@ -7,7 +7,7 @@ public class ErrorAction extends ActionSupport {
 	
 	@Override
 	public String execute() throws Exception {
-		this.errMsg = "This is my custom error page";
+		//this.errMsg = "This is my custom error page";
 		return SUCCESS;
 	}
 	
