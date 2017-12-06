@@ -32,7 +32,10 @@
 		</action>
 		<action name="productadd" class="com.action.ProductAddAction">
 			<result>/WEB-INF/product.jsp</result>
-			<result name="error">/error.jsp?errMsg=dddd</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="customer" class="com.action.CustomerAction">
+			<result>/WEB-INF/customer.jsp</result>
 		</action>
 	</package>
 </struts>

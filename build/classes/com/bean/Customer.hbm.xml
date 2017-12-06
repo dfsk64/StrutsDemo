@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Customer" table="customer"
+		discriminator-value="cus">
+		<id name="id">
+			<generator class="uuid" />
+		</id>
+		<discriminator column="type" type="string"></discriminator>
+		<property name="name"></property>
+
+		<list name="message" cascade="all">
+			<key column="cid"></key>
+			<index column="type"></index>
+			<one-to-many class="com.bean.CustomerMessage" />
+		</list>
+
+		<subclass name="com.bean.CustomerAdmin" discriminator-value="cusadmin">
+			<property name="role" />
+			<property name="permission" />
+		</subclass>
+
+		<subclass name="com.bean.CustomerUser" discriminator-value="cususer">
+			<property name="email" />
+			<property name="phone" />
+		</subclass>
+	</class>
+	<class name="com.bean.CustomerMessage" table="customer_message">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="msg"></property>
+	</class>
+</hibernate-mapping>
